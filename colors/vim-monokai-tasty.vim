@@ -60,6 +60,9 @@ let s:bold = { 'cterm': 'bold', 'gui': 'bold' }
 let s:underline = { 'cterm': 'underline', 'gui': 'underline' }
 let s:bold_underline = { 'cterm': 'bold,underline', 'gui': 'bold,underline' }
 
+" My Colors
+let s:comment_green = { 'cterm': 42, 'gui': '#6fdb81' }
+
 function! Highlight(group, colour)
   let l:foreground = exists('a:colour.fg')
         \ ? ' ctermfg=' . a:colour.fg.cterm . ' guifg=' . a:colour.fg.gui
@@ -191,7 +194,7 @@ call Highlight('jsFutureKeys', { 'fg': s:purple, 'bg': s:none, 'style': s:none }
 
 call Highlight('Folded', { 'fg': s:grey, 'bg': s:none, 'style': s:none })
 call Highlight('FoldColumn', { 'fg': s:light_grey, 'bg': s:none, 'style': s:none })
-call Highlight('Comment', { 'fg': s:grey, 'bg': s:none, 'style': s:italic })
+call Highlight('Comment', { 'fg': s:comment_green, 'bg': s:none, 'style': s:italic })
 
 call Highlight('Label', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
 call Highlight('String', { 'fg': s:yellow, 'bg': s:none, 'style': s:none })
